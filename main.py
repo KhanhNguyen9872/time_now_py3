@@ -47,7 +47,7 @@ def get_time():
 
 def print_time():
     global date, time_now, time, timezone
-    landspace_line = "=" * 52
+    landspace_line = " " + "=" * 46 + " "
     while 1:
         time = ""
         for char in time_now:
@@ -57,7 +57,7 @@ def print_time():
                 pass
             time = time + "{0} ".format(ahihi[char])
         datetimezone_str = "> Date: " + date + " [{0}]".format(timezone)
-        datetimezone_str = datetimezone_str + str(" " * int(49 - len(datetimezone_str)))
+        datetimezone_str = datetimezone_str + str(" " * int(45 - len(datetimezone_str)))
         output = landspace_line + "\n" + get_output([x for x in time.split(" ") if x]) + datetimezone_str + "|\n" + landspace_line + "\n"
         stdout.clear()
         stdout.write(output)
