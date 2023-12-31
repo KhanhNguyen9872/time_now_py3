@@ -42,7 +42,7 @@ def get_time():
         tmp = str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
         time_now = tmp.split(" ")[1]
         date = tmp.split(" ")[0]
-        time.sleep(0.25)
+        sleep(0.25)
 
 
 def print_time():
@@ -61,11 +61,12 @@ def print_time():
         output = landspace_line + "\n" + get_output([x for x in time.split(" ") if x]) + datetimezone_str + "|\n" + landspace_line + "\n"
         stdout.clear()
         stdout.write(output)
-        time.sleep(0.25)
+        sleep(0.25)
 
 if (__name__=="__main__"):
     from dict import ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, HOLYSHIT
-    import datetime, time
+    import datetime
+    from time import sleep
     from khanhnguyen9872 import stdout
     from threading import Thread
     ahihi = {0: 'ZERO', 1: 'ONE', 2: 'TWO', 3: 'THREE', 4: 'FOUR', 5: 'FIVE', 6: 'SIX', 7: 'SEVEN', 8: 'EIGHT', 9: 'NINE', ':': 'HOLYSHIT'}
