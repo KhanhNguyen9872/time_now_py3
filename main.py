@@ -72,6 +72,10 @@ if (__name__=="__main__"):
     ahihi = {0: 'ZERO', 1: 'ONE', 2: 'TWO', 3: 'THREE', 4: 'FOUR', 5: 'FIVE', 6: 'SIX', 7: 'SEVEN', 8: 'EIGHT', 9: 'NINE', ':': 'HOLYSHIT'}
 
     if __import__('os').name == 'nt':
+        try:
+            __import__('colorama')
+        except (ImportError, ModuleNotFoundError):
+            __import__('os').system("{0} -m pip install colorama".format(__import__('sys').executable))
         __import__('colorama').just_fix_windows_console()
 
     timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzname()
